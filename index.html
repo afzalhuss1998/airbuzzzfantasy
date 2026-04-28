@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Airbuzz Fantasy | Cricket Updates & Sports Community</title>
+  <title>Airbuzz Fantasy | Cricket Updates & Account Support</title>
   <meta name="description" content="Airbuzz Fantasy is a sports community page for cricket updates, match insights, and simple account guidance through WhatsApp support." />
+
+  <link rel="preconnect" href="https://wa.me">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18113561351"></script>
@@ -12,12 +14,20 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-18113561351');
+
+    function trackWhatsAppConversion() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18113561351/fBRWCT735KEcEIeGnL1D',
+        'value': 1.0,
+        'currency': 'INR'
+      });
+    }
   </script>
 
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -25,22 +35,26 @@
       color: #111827;
       line-height: 1.6;
     }
+
     .wrap {
       max-width: 1100px;
       margin: 0 auto;
       padding: 24px;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 16px 0;
     }
+
     .logo {
       font-size: 24px;
       font-weight: 800;
       color: #0f172a;
     }
+
     .pill {
       background: #e0f2fe;
       color: #075985;
@@ -49,6 +63,7 @@
       font-size: 14px;
       font-weight: 700;
     }
+
     .hero {
       background: linear-gradient(135deg, #0f172a, #1e3a8a);
       color: white;
@@ -57,17 +72,20 @@
       margin-top: 16px;
       text-align: center;
     }
+
     h1 {
       font-size: 44px;
       line-height: 1.15;
       margin: 0 0 16px;
     }
+
     .hero p {
       max-width: 760px;
       margin: 0 auto 26px;
       color: #dbeafe;
       font-size: 18px;
     }
+
     .cta {
       display: inline-block;
       background: #22c55e;
@@ -76,18 +94,23 @@
       border-radius: 14px;
       font-weight: 800;
       text-decoration: none;
+      border: none;
+      cursor: pointer;
     }
+
     .cta.secondary {
       background: white;
       color: #0f172a;
       margin-left: 10px;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
       margin-top: 28px;
     }
+
     .card {
       background: white;
       border: 1px solid #e5e7eb;
@@ -95,12 +118,18 @@
       padding: 24px;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
     }
+
     .card h3 {
       margin: 0 0 8px;
       color: #0f172a;
       font-size: 20px;
     }
-    .card p { margin: 0; color: #4b5563; }
+
+    .card p {
+      margin: 0;
+      color: #4b5563;
+    }
+
     .section {
       margin-top: 34px;
       background: white;
@@ -108,23 +137,27 @@
       border-radius: 24px;
       padding: 30px;
     }
+
     .section h2 {
       margin-top: 0;
       font-size: 30px;
       color: #0f172a;
     }
+
     .steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       margin-top: 16px;
     }
+
     .step {
       background: #f8fafc;
       border: 1px solid #e5e7eb;
       border-radius: 18px;
       padding: 18px;
     }
+
     .num {
       width: 36px;
       height: 36px;
@@ -137,30 +170,72 @@
       font-weight: 800;
       margin-bottom: 10px;
     }
+
     .support {
       text-align: center;
       background: #ecfdf5;
       border-color: #bbf7d0;
     }
+
     .small {
       font-size: 13px;
       color: #6b7280;
       margin-top: 16px;
     }
+
     footer {
       text-align: center;
       color: #6b7280;
       font-size: 13px;
       margin: 28px 0 10px;
     }
+
+    footer a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .sticky-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
     @media (max-width: 820px) {
       h1 { font-size: 34px; }
-      .grid, .steps { grid-template-columns: 1fr; }
-      .cta.secondary { margin-left: 0; margin-top: 10px; }
-      header { flex-direction: column; gap: 10px; }
+
+      .grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .cta.secondary {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 42px 24px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
@@ -169,11 +244,22 @@
     </header>
 
     <section class="hero">
-      <h1>Sports Gaming Account Guidance & Cricket Updates</h1>
+      <h1>Cricket Updates & Platform Account Assistance</h1>
       <p>
-        Airbuzz Fantasy helps sports fans stay updated with cricket news, match-day insights, and clear guidance for creating a sports gaming account through our support team.
+        Airbuzz Fantasy helps sports fans stay updated with cricket news, match-day insights,
+        and clear guidance for platform account assistance through our WhatsApp support team.
       </p>
-      <a class="cta" href="https://wa.me/+447781545934?text=Hi%20Airbuzz%20Fantasy%2C%20I%20want%20signup%20guidance." target="_blank" rel="noopener noreferrer">Get Gaming Account Guidance</a>
+
+      <a
+        class="cta"
+        href="https://wa.me/447781545934?text=Hi%20Airbuzz%20Fantasy%2C%20I%20want%20account%20guidance."
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="trackWhatsAppConversion();"
+      >
+        Get Account Guidance
+      </a>
+
       <a class="cta secondary" href="#how">How It Works</a>
     </section>
 
@@ -182,51 +268,90 @@
         <h3>Daily Cricket Updates</h3>
         <p>Follow match-related updates, team news, and useful sports information in one place.</p>
       </div>
+
       <div class="card">
         <h3>Match Insights</h3>
         <p>Get easy-to-understand match information and sports discussion for cricket fans.</p>
       </div>
+
       <div class="card">
-        <h3>Gaming Account Support</h3>
-        <p>Need help creating your gaming ID? Our WhatsApp support can guide you with account setup steps.</p>
+        <h3>Account Support</h3>
+        <p>Need help with account setup information? Our WhatsApp support can guide you with simple steps.</p>
       </div>
     </section>
 
     <section class="section" id="how">
       <h2>How It Works</h2>
       <p>Simple and clear steps for users who want to connect with Airbuzz Fantasy.</p>
+
       <div class="steps">
         <div class="step">
           <div class="num">1</div>
           <h3>Visit</h3>
-          <p>Check the updates and information shared on this page.</p>
+          <p>Check the cricket updates and sports information shared on this page.</p>
         </div>
+
         <div class="step">
           <div class="num">2</div>
           <h3>Message Support</h3>
-          <p>Tap WhatsApp to ask for gaming ID guidance or platform account information.</p>
+          <p>Tap WhatsApp to ask for account guidance or platform information.</p>
         </div>
+
         <div class="step">
           <div class="num">3</div>
-          <h3>Create Your ID</h3>
+          <h3>Complete Registration</h3>
           <p>Our support team will guide you with simple account setup information.</p>
         </div>
       </div>
     </section>
 
+    <section class="section">
+      <h2>About Airbuzz Fantasy</h2>
+      <p>
+        Airbuzz Fantasy is an independent sports community platform that shares cricket updates,
+        match insights, and general account assistance information. We do not provide real-money
+        gaming services directly through this website.
+      </p>
+    </section>
+
     <section class="section support">
-      <h2>Need Gaming ID Help?</h2>
-      <p>Message us on WhatsApp for sports gaming account guidance and platform information.</p>
-      <p><strong>WhatsApp:</strong> +447781545934</p>
-      <a class="cta" href="https://wa.me/+447781545934?text=Hi%20Airbuzz%20Fantasy%2C%20please%20help%20me%20with%20signup." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+      <h2>Need Account Setup Help?</h2>
+      <p>Message us on WhatsApp for account guidance and platform information.</p>
+
+      <p><strong>WhatsApp:</strong> +44 7781 545934</p>
+
+      <a
+        class="cta"
+        href="https://wa.me/447781545934?text=Hi%20Airbuzz%20Fantasy%2C%20please%20help%20me%20with%20account%20setup."
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="trackWhatsAppConversion();"
+      >
+        Chat on WhatsApp
+      </a>
+
       <p class="small">
-        This page is for sports updates, community information, and sports gaming account support. Ad approval depends on platform policy review, account status, landing page quality, and ad content.
+        This page is for sports updates, community information, and account support. Ad approval
+        depends on platform policy review, account status, landing page quality, and ad content.
       </p>
     </section>
 
     <footer>
       © 2026 Airbuzz Fantasy. Sports updates and support page.
+      <br><br>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms & Conditions</a>
     </footer>
   </div>
+
+  <a
+    class="sticky-whatsapp"
+    href="https://wa.me/447781545934?text=Hi%20Airbuzz%20Fantasy%2C%20I%20need%20account%20help."
+    target="_blank"
+    rel="noopener noreferrer"
+    onclick="trackWhatsAppConversion();"
+  >
+    Chat Now
+  </a>
 </body>
 </html>
