@@ -3,197 +3,349 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Airbuzz Fantasy | Cricket Updates & Sports Community</title>
-
-  <!-- Google tag (gtag.js) - make sure this exists -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18113561351"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18113561351');
-  </script>
-
+  <title>AirBuzz Gaming ID Access</title>
+  <meta name="description" content="AirBuzz gaming platform access, self sign-up and match-time updates." />
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f7f9fc;
-      color: #111827;
-      line-height: 1.6;
+      background: #06111f;
+      color: #ffffff;
+      line-height: 1.5;
     }
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px;
+    .page {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(0, 174, 255, .22), transparent 34%),
+        radial-gradient(circle at top left, rgba(255, 204, 0, .14), transparent 30%),
+        linear-gradient(180deg, #06111f 0%, #071a2e 48%, #04101c 100%);
+      padding-bottom: 88px;
     }
+    .container { width: min(1120px, 92%); margin: auto; }
     header {
+      padding: 20px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 0;
     }
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 24px;
-      font-weight: 800;
-      color: #0f172a;
+      font-weight: 900;
+      letter-spacing: .5px;
     }
-    .pill {
-      background: #e0f2fe;
-      color: #075985;
+    .logo-badge {
+      width: 42px; height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #00a3ff, #00e0ff);
+      color: #04101c;
+      font-weight: 900;
+    }
+    .safe-pill {
+      font-size: 13px;
       padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.14);
       border-radius: 999px;
-      font-size: 14px;
-      font-weight: 700;
+      color: #b8d7f3;
+      background: rgba(255,255,255,.05);
     }
     .hero {
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-      color: white;
-      border-radius: 28px;
-      padding: 54px 36px;
-      margin-top: 16px;
-      text-align: center;
+      padding: 34px 0 28px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: #071a2e;
+      background: #ffcc00;
+      font-weight: 800;
+      margin-bottom: 18px;
     }
     h1 {
-      font-size: 44px;
-      line-height: 1.15;
-      margin: 0 0 16px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: .95;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
     }
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 26px;
-      color: #dbeafe;
-      font-size: 18px;
+    h1 span { color: #00c8ff; }
+    .lead {
+      font-size: 19px;
+      color: #cfe7ff;
+      max-width: 620px;
+      margin-bottom: 24px;
     }
-    .cta {
-      display: inline-block;
-      background: #22c55e;
-      color: #052e16;
-      padding: 15px 24px;
-      border-radius: 14px;
-      font-weight: 800;
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .btn {
+      border: none;
+      outline: none;
+      cursor: pointer;
       text-decoration: none;
-      margin: 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 22px;
+      border-radius: 16px;
+      font-size: 17px;
+      font-weight: 900;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .cta.secondary {
-      background: white;
-      color: #0f172a;
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      color: #04101c;
+      background: linear-gradient(135deg, #ffcc00, #ffec77);
+      box-shadow: 0 14px 32px rgba(255, 204, 0, .25);
     }
-    .cta.blue {
-      background: #2563eb;
+    .btn-secondary {
       color: #ffffff;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+    }
+    .note { color: #9bbbd8; font-size: 14px; }
+    .phone-card {
+      position: relative;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 34px;
+      padding: 22px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+      overflow: hidden;
+    }
+    .phone-card:before {
+      content: "";
+      position: absolute;
+      inset: -70px -90px auto auto;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(0,200,255,.20);
+      filter: blur(12px);
+    }
+    .score-card {
+      position: relative;
+      border-radius: 28px;
+      background: #071827;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .live {
+      display: inline-block;
+      background: #ff334b;
+      color: #fff;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+    .teams {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .team {
+      flex: 1;
+      background: rgba(255,255,255,.06);
+      border-radius: 18px;
+      padding: 14px;
+      text-align: center;
+    }
+    .team strong { display: block; font-size: 22px; }
+    .vs { color: #ffcc00; font-weight: 900; }
+    .updates {
+      display: grid;
+      gap: 10px;
+    }
+    .update-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.06);
+      color: #d8ecff;
+    }
+    .section { padding: 34px 0; }
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 28px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
     .card {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      padding: 20px;
     }
-    .section {
-      margin-top: 34px;
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 24px;
-      padding: 30px;
+    .icon {
+      width: 46px; height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(0,200,255,.14);
+      color: #00c8ff;
+      font-size: 24px;
+      margin-bottom: 12px;
     }
-    .support {
+    .card h3 { font-size: 18px; margin-bottom: 8px; }
+    .card p { color: #b9d2e8; font-size: 14px; }
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .trust .card { text-align: center; }
+    .trust strong { display: block; font-size: 28px; color: #ffcc00; }
+    .cta-panel {
+      margin-top: 12px;
+      background: linear-gradient(135deg, rgba(0,200,255,.15), rgba(255,204,0,.12));
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 28px;
+      padding: 28px;
       text-align: center;
-      background: #ecfdf5;
-      border-color: #bbf7d0;
     }
+    .cta-panel h2 { font-size: 34px; margin-bottom: 10px; }
+    .cta-panel p { color: #cfe7ff; margin-bottom: 20px; }
     footer {
-      text-align: center;
-      color: #6b7280;
+      padding: 26px 0;
+      color: #91aec8;
       font-size: 13px;
-      margin: 28px 0 10px;
+      border-top: 1px solid rgba(255,255,255,.10);
     }
-    @media (max-width: 820px) {
-      h1 { font-size: 34px; }
-      .grid { grid-template-columns: 1fr; }
-      header { flex-direction: column; gap: 10px; }
+    footer a { color: #cfe7ff; margin-right: 14px; text-decoration: none; }
+    .sticky-cta {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      padding: 12px;
+      background: rgba(4,16,28,.88);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255,255,255,.12);
+      z-index: 20;
+    }
+    .sticky-cta .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .sticky-cta span { color: #cfe7ff; font-weight: 700; }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; padding-top: 20px; }
+      .grid, .trust { grid-template-columns: 1fr 1fr; }
+      .sticky-cta .container { flex-direction: column; align-items: stretch; }
+      .sticky-cta .btn { width: 100%; }
+    }
+    @media (max-width: 520px) {
+      header { align-items: flex-start; gap: 12px; flex-direction: column; }
+      .grid, .trust { grid-template-columns: 1fr; }
+      h1 { font-size: 42px; }
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
+  <main class="page">
+    <div class="container">
+      <header>
+        <div class="logo"><div class="logo-badge">A</div> AIRBUZZ</div>
+        <div class="safe-pill">Gaming ID • Self sign-up • Secure access</div>
+      </header>
 
-    <header>
-      <div class="logo">Airbuzz Fantasy</div>
-      <div class="pill">Cricket Updates • Sports Community</div>
-    </header>
+      <section class="hero">
+        <div>
+          <div class="tag">🎮 Self Sign-Up Platform</div>
+          <h1>Get New <span>Gaming ID</span> Now</h1>
+          <p class="lead">Create your gaming ID in minutes with a simple self sign-up flow. Fast access, clear information and support available when needed.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#continue">Get New ID Now ⚡</a>
+            <a class="btn btn-secondary" href="#features">How It Works</a>
+          </div>
+          <p class="note">Secure access. User-initiated sign-up. Support available.</p>
+        </div>
 
-    <section class="hero">
-      <h1>Sports Gaming Account Guidance & Cricket Updates</h1>
-      <p>
-        Airbuzz Fantasy helps sports fans stay updated with cricket news, match-day insights, and clear guidance for creating a sports gaming account through our support team.
-      </p>
+        <div class="phone-card">
+          <div class="score-card">
+            <span class="live">ID ACCESS</span>
+            <div class="teams">
+              <div class="team"><strong>Gaming</strong><small>Platform</small></div>
+              <div class="vs">•</div>
+              <div class="team"><strong>Self</strong><small>Sign-Up</small></div>
+            </div>
+            <div class="updates">
+              <div class="update-item"><span>Gaming ID Access</span><strong>Active</strong></div>
+              <div class="update-item"><span>Self Sign-Up</span><strong>Fast</strong></div>
+              <div class="update-item"><span>Secure Flow</span><strong>Enabled</strong></div>
+              <div class="update-item"><span>Support</span><strong>Available</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <!-- BUTTON 1 -->
-      <a class="cta"
-        href="https://airbuzz.live/clk?src=9Iyjpu0O"
-        target="_blank"
-        onclick="gtag('event','conversion',{'send_to':'AW-18113561351/fBRWCT735KEcEIeGnL1D','value':1.0,'currency':'INR'});">
-        SIGNUP IN MINUTES
-      </a>
+      <section class="section" id="features">
+        <h2 class="section-title">Why Create Your ID?</h2>
+        <div class="grid">
+          <div class="card"><div class="icon">⚡</div><h3>Quick Sign-Up</h3><p>Create your gaming ID through a simple self sign-up process.</p></div>
+          <div class="card"><div class="icon">🔐</div><h3>Secure Access</h3><p>Clear and user-initiated access flow with support available.</p></div>
+          <div class="card"><div class="icon">🎮</div><h3>Gaming Platform</h3><p>Get access to the platform and start with your new ID.</p></div>
+          <div class="card"><div class="icon">💬</div><h3>Support Help</h3><p>Need help? Continue to support only when you choose.</p></div>
+        </div>
+      </section>
 
-      <!-- BUTTON 2 -->
-      <a class="cta"
-        href="https://wa.me/447781545934"
-        target="_blank"
-        onclick="gtag('event','conversion',{'send_to':'AW-18113561351/fBRWCT735KEcEIeGnL1D','value':1.0,'currency':'INR'});">
-        Chat on WhatsApp
-      </a>
+      <section class="section">
+        <h2 class="section-title">Built for Gaming Users</h2>
+        <div class="trust">
+          <div class="card"><strong>Fast</strong><p>Self sign-up flow</p></div>
+          <div class="card"><strong>Safe</strong><p>Secure access process</p></div>
+          <div class="card"><strong>Clear</strong><p>Transparent information</p></div>
+        </div>
+      </section>
 
-      <!-- BUTTON 3 (NEW) -->
-      <a class="cta blue"
-        href="https://airbuzz.live/clk?src=9Iyjpu0O"
-        target="_blank">
-        QUICK SIGNUP
-      </a>
-
-    </section>
-
-    <section class="grid">
-      <div class="card">
-        <h3>Daily Cricket Updates</h3>
-        <p>Follow match-related updates, team news, and useful sports information in one place.</p>
-      </div>
-      <div class="card">
-        <h3>Match Insights</h3>
-        <p>Get easy-to-understand match information and sports discussion for cricket fans.</p>
-      </div>
-      <div class="card">
-        <h3>Gaming Account Support</h3>
-        <p>QUICK SIGNUP Our WhatsApp support can guide you.</p>
-      </div>
-    </section>
-
-    <section class="section support">
-      <h2>Need Gaming ID Help?</h2>
-      <p>Message us on WhatsApp for guidance.</p>
-
-      <a class="cta"
-        href="https://wa.me/447781545934"
-        target="_blank"
-        onclick="gtag('event','conversion',{'send_to':'AW-18113561351/fBRWCT735KEcEIeGnL1D','value':1.0,'currency':'INR'});">
-        Chat on WhatsApp
-      </a>
-
-    </section>
+      <section class="section" id="continue">
+        <div class="cta-panel">
+          <h2>Get Your New Gaming ID</h2>
+          <p>Click below to continue to the self sign-up or support option.</p>
+          <a class="btn btn-primary" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20create%20a%20new%20gaming%20ID" target="_blank" rel="noopener">Get New ID Now →</a>
+        </div>
+      </section>
+    </div>
 
     <footer>
-      © 2026 Airbuzz Fantasy
+      <div class="container">
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact</a>
+        <p style="margin-top:10px;">AIRBUZZ provides gaming platform access information, self sign-up support and user assistance.</p>
+      </div>
     </footer>
+  </main>
 
+  <div class="sticky-cta">
+    <div class="container">
+      <span>Gaming ID self sign-up available now</span>
+      <a class="btn btn-primary" href="#continue">Get Match Updates</a>
+    </div>
   </div>
 </body>
 </html>
