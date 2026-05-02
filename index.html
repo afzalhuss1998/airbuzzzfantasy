@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AirBuzz Gaming ID Access</title>
   <meta name="description" content="AirBuzz gaming platform access, self sign-up and match-time updates." />
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -104,206 +106,123 @@
       border-radius: 16px;
       font-size: 17px;
       font-weight: 900;
-      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .btn:hover { transform: translateY(-2px); }
     .btn-primary {
       color: #04101c;
       background: linear-gradient(135deg, #ffcc00, #ffec77);
-      box-shadow: 0 14px 32px rgba(255, 204, 0, .25);
     }
     .btn-secondary {
       color: #ffffff;
       background: rgba(255,255,255,.08);
       border: 1px solid rgba(255,255,255,.16);
     }
-    .note { color: #9bbbd8; font-size: 14px; }
-    .phone-card {
-      position: relative;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 34px;
-      padding: 22px;
-      box-shadow: 0 24px 80px rgba(0,0,0,.35);
-      overflow: hidden;
-    }
-    .phone-card:before {
-      content: "";
-      position: absolute;
-      inset: -70px -90px auto auto;
-      width: 220px; height: 220px;
-      border-radius: 50%;
-      background: rgba(0,200,255,.20);
-      filter: blur(12px);
-    }
-    .score-card {
-      position: relative;
-      border-radius: 28px;
-      background: #071827;
-      padding: 22px;
-      border: 1px solid rgba(255,255,255,.12);
-    }
-    .live {
-      display: inline-block;
-      background: #ff334b;
-      color: #fff;
-      padding: 5px 11px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-    .teams {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-    .team {
-      flex: 1;
-      background: rgba(255,255,255,.06);
-      border-radius: 18px;
-      padding: 14px;
-      text-align: center;
-    }
-    .team strong { display: block; font-size: 22px; }
-    .vs { color: #ffcc00; font-weight: 900; }
-    .updates {
-      display: grid;
-      gap: 10px;
-    }
-    .update-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 12px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.06);
-      color: #d8ecff;
-    }
+
+    .phone-card { background: rgba(255,255,255,.08); border-radius: 34px; padding: 22px; }
+    .score-card { border-radius: 28px; background: #071827; padding: 22px; }
+    .live { background: #ff334b; padding: 5px 11px; border-radius: 999px; font-size: 12px; font-weight: 900; }
+    .teams { display: flex; justify-content: space-between; margin: 20px 0; }
+    .team { flex: 1; background: rgba(255,255,255,.06); padding: 14px; border-radius: 18px; text-align: center; }
+    .updates { display: grid; gap: 10px; }
+    .update-item { display: flex; justify-content: space-between; padding: 12px; background: rgba(255,255,255,.06); border-radius: 14px; }
+
     .section { padding: 34px 0; }
-    .section-title {
-      font-size: 34px;
-      margin-bottom: 16px;
-      letter-spacing: -1px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-    .card {
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 22px;
-      padding: 20px;
-    }
-    .icon {
-      width: 46px; height: 46px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: rgba(0,200,255,.14);
-      color: #00c8ff;
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-    .card h3 { font-size: 18px; margin-bottom: 8px; }
-    .card p { color: #b9d2e8; font-size: 14px; }
-    .trust {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
+    .section-title { font-size: 34px; margin-bottom: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .card { background: rgba(255,255,255,.07); border-radius: 22px; padding: 20px; }
+
+    .trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .trust .card { text-align: center; }
-    .trust strong { display: block; font-size: 28px; color: #ffcc00; }
-    .cta-panel {
-      margin-top: 12px;
-      background: linear-gradient(135deg, rgba(0,200,255,.15), rgba(255,204,0,.12));
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 28px;
-      padding: 28px;
-      text-align: center;
-    }
-    .cta-panel h2 { font-size: 34px; margin-bottom: 10px; }
-    .cta-panel p { color: #cfe7ff; margin-bottom: 20px; }
-    footer {
-      padding: 26px 0;
-      color: #91aec8;
-      font-size: 13px;
-      border-top: 1px solid rgba(255,255,255,.10);
-    }
-    footer a { color: #cfe7ff; margin-right: 14px; text-decoration: none; }
+
+    .cta-panel { background: rgba(255,255,255,.05); padding: 30px; border-radius: 20px; text-align: center; }
+
     .sticky-cta {
       position: fixed;
-      left: 0; right: 0; bottom: 0;
+      bottom: 0;
+      width: 100%;
       padding: 12px;
-      background: rgba(4,16,28,.88);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(255,255,255,.12);
-      z-index: 20;
+      background: rgba(0,0,0,.8);
+      text-align: center;
     }
-    .sticky-cta .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-    .sticky-cta span { color: #cfe7ff; font-weight: 700; }
   </style>
 </head>
 
 <body>
-  <main class="page">
-    <div class="container">
-      <header>
-        <div class="logo"><div class="logo-badge">A</div> AIRBUZZ</div>
-        <div class="safe-pill">Gaming ID • Self sign-up • Secure access</div>
-      </header>
+<main class="page">
+<div class="container">
 
-      <section class="hero">
-        <div>
-          <div class="tag">🎮 Self Sign-Up Platform</div>
-          <h1>Get New <span>Gaming ID</span> Now</h1>
-          <p class="lead">Create your gaming ID in minutes with a simple self sign-up flow.</p>
+<header>
+  <div class="logo"><div class="logo-badge">A</div> AIRBUZZ</div>
+  <div class="safe-pill">Gaming ID • Secure access</div>
+</header>
 
-          <div class="cta-row">
-            <!-- UPDATED -->
-            <a class="btn btn-primary" href="https://airbuzz.live/clk?src=9Iyjpu0O" target="_blank">Get New ID Now ⚡</a>
+<section class="hero">
+  <div>
+    <div class="tag">🎮 Self Sign-Up Platform</div>
+    <h1>Get New <span>Gaming ID</span> Now</h1>
+    <p class="lead">Create your gaming ID in minutes.</p>
 
-            <!-- UPDATED -->
-            <a class="btn btn-secondary" href="https://wa.me/447781545934" target="_blank">How It Works</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="continue">
-        <div class="cta-panel">
-          <h2>Get Your New Gaming ID</h2>
-          <p>Click below to continue</p>
-
-          <!-- UPDATED -->
-          <a class="btn btn-primary" href="https://wa.me/447781545934" target="_blank">Get New ID Now →</a>
-        </div>
-      </section>
-    </div>
-
-    <footer>
-      <div class="container">
-        <p>AIRBUZZ provides gaming platform access.</p>
-      </div>
-    </footer>
-  </main>
-
-  <div class="sticky-cta">
-    <div class="container">
-      <span>Gaming ID self sign-up available now</span>
-
-      <!-- UPDATED -->
-      <a class="btn btn-primary" href="https://wa.me/447781545934" target="_blank">Get Match Updates</a>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://airbuzz.live/clk?src=9Iyjpu0O" target="_blank">Get New ID Now ⚡</a>
+      <a class="btn btn-secondary" href="https://wa.me/447781545934" target="_blank">How It Works</a>
     </div>
   </div>
+
+  <!-- RIGHT BOX -->
+  <div class="phone-card">
+    <div class="score-card">
+      <span class="live">ID ACCESS</span>
+
+      <div class="teams">
+        <div class="team"><strong>Gaming</strong><small>Platform</small></div>
+        <div class="team"><strong>Self</strong><small>Sign-Up</small></div>
+      </div>
+
+      <div class="updates">
+        <div class="update-item"><span>Gaming ID Access</span><strong>Active</strong></div>
+        <div class="update-item"><span>Self Sign-Up</span><strong>Fast</strong></div>
+        <div class="update-item"><span>Secure Flow</span><strong>Enabled</strong></div>
+        <div class="update-item"><span>Support</span><strong>Available</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <h2 class="section-title">Why Create Your ID?</h2>
+  <div class="grid">
+    <div class="card"><h3>Quick Sign-Up</h3><p>Create your gaming ID easily.</p></div>
+    <div class="card"><h3>Secure Access</h3><p>Safe and secure process.</p></div>
+    <div class="card"><h3>Gaming Platform</h3><p>Start with your new ID.</p></div>
+    <div class="card"><h3>Support Help</h3><p>Support when needed.</p></div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section">
+  <h2 class="section-title">Built for Gaming Users</h2>
+  <div class="trust">
+    <div class="card"><strong>Fast</strong><p>Self sign-up flow</p></div>
+    <div class="card"><strong>Safe</strong><p>Secure process</p></div>
+    <div class="card"><strong>Clear</strong><p>Transparent info</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cta-panel">
+    <h2>Get Your New Gaming ID</h2>
+    <a class="btn btn-primary" href="https://wa.me/447781545934" target="_blank">Get New ID Now →</a>
+  </div>
+</section>
+
+</div>
+</main>
+
+<div class="sticky-cta">
+  <a class="btn btn-primary" href="https://airbuzz.live/clk?src=9Iyjpu0O" target="_blank">
+    GET NEW ID NOW
+  </a>
+</div>
 
 </body>
 </html>
