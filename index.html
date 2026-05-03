@@ -1,251 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AirBuzz Gaming ID Access</title>
-  <meta name="description" content="AirBuzz gaming platform access, self sign-up and match-time updates." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AirBuzz | Account Registration Support</title>
 
-  <!-- ✅ GOOGLE ADS TAG -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18113561351"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18113561351');
-  </script>
+<meta name="description" content="AirBuzz provides simple account registration support with secure guidance and customer assistance.">
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #06111f;
-      color: #ffffff;
-      line-height: 1.5;
-    }
-    .page {
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top right, rgba(0, 174, 255, .22), transparent 34%),
-        radial-gradient(circle at top left, rgba(255, 204, 0, .14), transparent 30%),
-        linear-gradient(180deg, #06111f 0%, #071a2e 48%, #04101c 100%);
-      padding-bottom: 88px;
-    }
-    .container { width: min(1120px, 92%); margin: auto; }
-    header {
-      padding: 20px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 24px;
-      font-weight: 900;
-    }
-    .logo-badge {
-      width: 42px; height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, #00a3ff, #00e0ff);
-      color: #04101c;
-      font-weight: 900;
-    }
-    .safe-pill {
-      font-size: 13px;
-      padding: 8px 12px;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 999px;
-      color: #b8d7f3;
-      background: rgba(255,255,255,.05);
-    }
-    .hero {
-      padding: 34px 0 28px;
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 36px;
-      align-items: center;
-    }
-    .tag {
-      display: inline-flex;
-      padding: 8px 13px;
-      border-radius: 999px;
-      color: #071a2e;
-      background: #ffcc00;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      margin-bottom: 18px;
-    }
-    .lead {
-      font-size: 19px;
-      color: #cfe7ff;
-      margin-bottom: 24px;
-    }
-    .cta-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-    .btn {
-      text-decoration: none;
-      padding: 15px 22px;
-      border-radius: 16px;
-      font-weight: 900;
-      display: inline-block;
-    }
-    .btn-primary {
-      color: #04101c;
-      background: linear-gradient(135deg, #ffcc00, #ffec77);
-    }
-    .btn-whatsapp {
-      color: #fff;
-      background: #25D366;
-      box-shadow: 0 10px 25px rgba(37,211,102,0.4);
-    }
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#0a1625;
+  color:#fff;
+}
+.container {
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo {
+  font-weight:bold;
+  font-size:22px;
+}
+.badge {
+  font-size:12px;
+  background:rgba(255,255,255,0.1);
+  padding:6px 10px;
+  border-radius:20px;
+}
 
-    .phone-card { background: rgba(255,255,255,.08); border-radius: 34px; padding: 22px; }
-    .score-card { border-radius: 28px; background: #071827; padding: 22px; }
-    .live { background: #ff334b; padding: 5px 11px; border-radius: 999px; font-size: 12px; font-weight: 900; }
-    .teams { display: flex; justify-content: space-between; margin: 20px 0; }
-    .team { flex: 1; background: rgba(255,255,255,.06); padding: 14px; border-radius: 18px; text-align: center; }
-    .updates { display: grid; gap: 10px; }
-    .update-item { display: flex; justify-content: space-between; padding: 12px; background: rgba(255,255,255,.06); border-radius: 14px; }
+h1 {
+  font-size:38px;
+  margin-top:30px;
+}
+p {
+  color:#cfe7ff;
+}
 
-    .section { padding: 34px 0; }
-    .section-title { font-size: 34px; margin-bottom: 16px; }
-    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .card { background: rgba(255,255,255,.07); border-radius: 22px; padding: 20px; }
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:16px 26px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.whatsapp {
+  background:#25D366;
+  color:#fff;
+}
 
-    .trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .trust .card { text-align: center; }
+.section {
+  margin-top:50px;
+}
+.card {
+  background:rgba(255,255,255,0.07);
+  padding:18px;
+  border-radius:12px;
+  margin-top:12px;
+}
 
-    .cta-panel { background: rgba(255,255,255,.05); padding: 30px; border-radius: 20px; text-align: center; }
-
-    .sticky-cta {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      padding: 12px;
-      background: rgba(0,0,0,.8);
-      text-align: center;
-    }
-  </style>
+.footer {
+  margin-top:50px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  font-size:14px;
+}
+.footer a {
+  color:#cfe7ff;
+  text-decoration:none;
+  margin-right:10px;
+}
+</style>
 </head>
 
 <body>
-<main class="page">
+
 <div class="container">
 
-<header>
-  <div class="logo"><div class="logo-badge">A</div> AIRBUZZ</div>
-  <div class="safe-pill">Gaming ID • Secure access</div>
-</header>
-
-<section class="hero">
-  <div>
-    <div class="tag">🎮 Self Sign-Up Platform</div>
-    <h1>Get New <span>Gaming ID</span> Now</h1>
-    <p class="lead">Create your gaming ID in minutes.</p>
-
-    <div class="cta-row">
-      <a class="btn btn-primary" href="https://airbuzz.live/clk?src=9Iyjpu0O" target="_blank">
-        Get New ID Now ⚡
-      </a>
-
-      <!-- ✅ WhatsApp Conversion -->
-      <a class="btn btn-whatsapp"
-         href="https://wa.me/447781545934"
-         onclick="gtag_report_conversion('https://wa.me/447781545934'); return false;">
-        WhatsApp Now
-      </a>
-    </div>
-  </div>
-
-  <div class="phone-card">
-    <div class="score-card">
-      <span class="live">ID ACCESS</span>
-
-      <div class="teams">
-        <div class="team"><strong>Gaming</strong><small>Platform</small></div>
-        <div class="team"><strong>Self</strong><small>Sign-Up</small></div>
-      </div>
-
-      <div class="updates">
-        <div class="update-item"><span>Gaming ID Access</span><strong>Active</strong></div>
-        <div class="update-item"><span>Self Sign-Up</span><strong>Fast</strong></div>
-        <div class="update-item"><span>Secure Flow</span><strong>Enabled</strong></div>
-        <div class="update-item"><span>Support</span><strong>Available</strong></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="section-title">Why Create Your ID?</h2>
-  <div class="grid">
-    <div class="card"><h3>Quick Sign-Up</h3><p>Create your gaming ID easily.</p></div>
-    <div class="card"><h3>Secure Access</h3><p>Safe and secure process.</p></div>
-    <div class="card"><h3>Gaming Platform</h3><p>Start with your new ID.</p></div>
-    <div class="card"><h3>Support Help</h3><p>Support when needed.</p></div>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="section-title">Built for Gaming Users</h2>
-  <div class="trust">
-    <div class="card"><strong>Fast</strong><p>Self sign-up flow</p></div>
-    <div class="card"><strong>Safe</strong><p>Secure process</p></div>
-    <div class="card"><strong>Clear</strong><p>Transparent info</p></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="cta-panel">
-    <h2>Get Your New Gaming ID</h2>
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/447781545934"
-       onclick="gtag_report_conversion('https://wa.me/447781545934'); return false;">
-      WhatsApp Now →
-    </a>
-  </div>
-</section>
-
-</div>
-</main>
-
-<div class="sticky-cta">
-  <a class="btn btn-whatsapp"
-     href="https://wa.me/447781545934"
-     onclick="gtag_report_conversion('https://wa.me/447781545934'); return false;">
-    WhatsApp Now
-  </a>
+<div class="header">
+  <div class="logo">AIRBUZZ</div>
+  <div class="badge">Secure Support</div>
 </div>
 
-<!-- ✅ Conversion Script -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-    'send_to': 'AW-18113561351/fBRWCK735KEcEIeGnL1D',
-    'value': 1.0,
-    'currency': 'INR',
-    'event_callback': callback
-  });
-  return false;
-}
-</script>
+<h1>Online Account Registration Support</h1>
+<p>We help users with simple account registration guidance and customer support.</p>
+
+<!-- ✅ ONLY WHATSAPP CTA -->
+<a href="https://wa.me/447781545934?text=Hello%20I%20need%20help" class="btn whatsapp" target="_blank">
+  Contact Support on WhatsApp
+</a>
+
+<!-- HOW IT WORKS -->
+<div class="section">
+  <h2>How It Works</h2>
+  <div class="card">1. Contact our support team</div>
+  <div class="card">2. Get step-by-step guidance</div>
+  <div class="card">3. Complete your registration</div>
+</div>
+
+<!-- WHY US -->
+<div class="section">
+  <h2>Why Choose Us</h2>
+  <div class="card">✔ Simple process</div>
+  <div class="card">✔ Secure assistance</div>
+  <div class="card">✔ Customer support available</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><strong>Business Name:</strong> AirBuzz</p>
+    <p><strong>Email:</strong> support@yourdomain.com</p>
+    <p><strong>Phone:</strong> +44 7781 545934</p>
+    <p><strong>Address:</strong> Your Business Address</p>
+  </div>
+</div>
+
+<!-- PRIVACY -->
+<div class="section" id="privacy">
+  <h2>Privacy Policy</h2>
+  <div class="card">
+    <p>We respect your privacy. Any information shared with us is used only for support purposes.</p>
+    <p>We do not sell or share your data with third parties.</p>
+  </div>
+</div>
+
+<!-- TERMS -->
+<div class="section" id="terms">
+  <h2>Terms & Conditions</h2>
+  <div class="card">
+    <p>This website provides account registration support.</p>
+    <p>Users are responsible for following applicable rules and platform policies.</p>
+    <p>We are not responsible for third-party services.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <a href="#privacy">Privacy Policy</a>
+  <a href="#terms">Terms</a>
+  <a href="#contact">Contact</a>
+  <br><br>
+  © 2026 AirBuzz
+</div>
+
+</div>
 
 </body>
 </html>
-```
